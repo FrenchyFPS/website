@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: FrenchyFPS/jekyll-test
+  repo: FrenchyFPS/website
   branch: master
 
 publish_mode: editorial_workflow
