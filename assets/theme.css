@@ -1,0 +1,20 @@
+/* Custom theme pour FrenchyFPS */
+
+body {
+    background-color:#26272b;
+    color: #ffffff;
+    height:100vh;
+}
+
+.sitebanner {
+    background-size: cover;
+    background-position-y: center;
+}
+
+.page-footer {
+	background-color:#202125;
+}
+
+.card {
+    border:none;
+}

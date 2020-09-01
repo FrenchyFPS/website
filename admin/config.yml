@@ -1,0 +1,86 @@
+backend:
+  name: github
+  repo: FrenchyFPS/jekyll-test
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "uploads"
+
+collections:
+  - name: "Articles"
+    label: "Articles"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Auteur", name: "author", widget: "string"}
+      - {label: "Twitter Card", name: "image", widget: "image"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+
+  - name: "Page"
+    label: "Pages"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    fields: # The fields for each pages
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "thumbnail image", name: "thumbnail image", widget: "image"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+
+  - name: "homepage"
+    label: "Home page"
+    files:
+      - label: "Home page"
+        name: "home"
+        file: "index.md"
+        fields: # Fields of the home page
+          - label: "Banniere" # Field de la catégorie bannière 
+            name: "banner"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Sous titre", name: "subtitle", widget: "string"}
+              - {label: "Image", name: "banner", widget: "image", required: false}
+          - label: "About" # Field de la catégorie about 
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "About - Image gauche", name: "image", widget: "image"}
+              - {label: "About - Description", name: "desc", widget: "markdown"}
+          - label: "Slogan" # Field de la catégorie slogan 
+            name: "slogan"
+            widget: "object"
+            fields: 
+              - {label: "Slogan - titre", name: "title", widget: "string"}
+              - {label: "Slogan - soustitre", name: "soustitre", widget: "markdown"}
+          - label: "Services" # Field de la catégorie service 
+            name: "services"
+            widget: "object"
+            fields:
+              - {label: "Description services", name: "descservices", widget: "markdown", required: false}
+              - label: "Service"
+                name: "service"
+                widget: "list"
+                fields:
+                  - {label: "Service name", name: "name", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image", required: false}
+                  - {label: "Description", name: "description", widget: "markdown", required: false}
+          - label: "Contact" # Field de la catégorie contact, bouton
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Contact - titre bouton", name: "title", widget: "string"}
+              - {label: "Lien", name: "link", widget: "string"}      
+          - label: "Youtube" # Field de la catégorie youtube
+            name: "youtube"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "markdown"}
+              - label: "Videos"
+                name: "videos"
+                widget: "list"
+                fields:
+                  - {label: "ID video youtube", name: "id", widget: "string"}
