@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<!-- Section header -->
+<div class="container-fluid h-50 sitebanner" style="background-image:url('{{ site.baseurl }}{{ page.banner.banner }}')";>
+	<div class="row align-items-center h-100">
+		<div class="col-lg-12 text-center">
+			<h1 class="font-weight-bold">{{page.banner.title}}</h1>
+			<p class="font-weight-bold font-italic lead">{{page.banner.subtitle}}</p>
+		</div>
+	</div>
+</div>
+
+<img src="{{ site.baseurl }}{{ page.banner.image }}">
+
+<!-- Section about -->
+<div class="container my-5 py-3">
+    <div class="row">
+      <div class="col-md my-2">
+        <img src="{{ site.baseurl }}{{ page.about.image }}" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-md my-2">
+        {{ page.about.desc | markdownify }}
+      </div>
+    </div>
+</div>
+
+<!-- Section slogan -->
+
+<div class="container my-5 py-3" id="services">
+	<div class="row">
+	<div class="col">
+		<h3 class="font-weight-bold text-center my-3">{{ page.slogan.title }}</h3>
+		<h4 class="font-italic text-center my-3">{{ page.slogan.soustitre | markdownify }}</h4>
+	</div>
+	</div>
+</div>
+
+<!-- Section services -->
+<!-- Pack menu + contact -->
+
+<div class="jumbotron bg-dark">
+	<h1 class="text-center">SERVICES</h1>
+	<div class="container py-3">
+	  <div class="row">
+
+		{% for service in page.services.service %}
+		<div class="col-lg-4 my-2">
+			<!-- card -->
+			<div class="card">
+				<img class="card-img-top img-fluid" src="{{ site.baseurl }}{{ service.image }}" alt="Image 1">
+				<div class="card-body text-dark">
+					<h5 class="card-title text-uppercase">{{ service.name }}</h5>
+					<div class="card-text">{{ service.description | markdownify }}</div>
+				</div>
+			</div>
+			<!-- end card -->
+		</div>
+		{% endfor %}  
+	  </div>
+	  <!-- end row -->
+	</div>
+	<!-- Description des services ou complément -->
+	<div class="container py-3">
+		<div class="row">
+			<div class="col-lg-12">
+				{{ page.services.descservices | markdownify }}
+			</div>
+		</div>
+	</div>
+
+	<!-- Bonton contact -->
+	<div class="container my-5" id ="contact">
+		<div class="row w-50 m-auto">
+			<div class="col-lg-12">
+				<a class=" btn btn-outline-danger btn-lg btn-block" href="{{ page.contact.link }}" target="_blank">{{ page.contact.title }}</a>
+			</div>
+		</div>
+	</div>
+	<!-- fin bouton contact -->
+</div>
+<!-- fin pack + bouton contact -->
+
+
+<!-- Affichage d'une vidéo youtube avec un titre et une description -->
+
+<div class="container my-5">
+	<h1 class="text-center">YOUTUBE</h1>
+	<div class="row">
+		<div class="col-lg-12 py-3 text-center">
+			{{ page.youtube.description | markdownify }}
+		</div>
+	</div>
+	{% for videos in page.youtube.videos %}
+	<div class="row w-75 m-auto">
+	  <div class="col-lg-12 my-2">
+		  <div id ="video1" class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item rounded" src="https://www.youtube.com/embed/{{ videos.id }}" allowfullscreen></iframe>
+		  </div>
+		</div>
+	</div>
+	{% endfor %} 
+</div>
