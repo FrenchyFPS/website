@@ -51,7 +51,7 @@ collections:
   pages:
     output: true
     permalink: /:path/
-  posts:
+  post:
       output: true
       permalink: /blog/:path
    
