@@ -19,6 +19,7 @@ There are two types of synchronization and they can complement each other:
  > To start syncing your workspace, just sign in with Google in the menu.
 
 - The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, 
+
 ## SmartyPants
 
 SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:

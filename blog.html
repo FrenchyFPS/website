@@ -14,7 +14,7 @@ title: Blog
           </div>
           <img src="{{ site.baseurl }}{{ post.image }}" class="img-fluid">
           <div class="p-3 my-1">
-            {{ post.excerpt | strip_html | truncatewords: 50 }}
+            {{ post.excerpt | strip_html | truncate: 500 }}
           </div>
         </div>
         </a>

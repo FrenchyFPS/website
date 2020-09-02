@@ -6,6 +6,21 @@ body {
     height:100vh;
 }
 
+table, th, td {
+    border: 1px solid;   
+}
+
+th, td {
+    padding: 0.25em;
+}
+
+pre {
+    background: linear-gradient(to bottom,#fff 0,#fff .75rem,#f5f7fa .75rem,#f5f7fa 2.75rem,#fff 2.75rem,#fff 4rem);
+    line-height: 2rem;
+    background-size: 100% 4rem;
+    padding: .66001rem 9.5px 9.5px;
+}
+
 .sitebanner {
     background-size: cover;
     background-position-y: center;
