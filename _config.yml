@@ -53,5 +53,5 @@ collections:
     permalink: /:path/
   post:
       output: true
-      permalink: /blog/:path
+      permalink: /blog/:path/
    
