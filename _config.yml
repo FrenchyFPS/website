@@ -46,3 +46,12 @@ exclude:
   - update_boostrap.sh
 
 theme: jekyll-theme-cayman
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  posts:
+      output: true
+      permalink: /blog/:path
+   
