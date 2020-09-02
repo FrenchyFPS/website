@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mon premier post blog
+title: "Mon premier post blog "
 description: Description
 author: Frenchy
 image: /uploads/frenchy.jpg
