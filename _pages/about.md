@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title: About
 author: FleauxTV
 thumbnail image: /uploads/unnamed.png
 ---
