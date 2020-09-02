@@ -1,6 +1,6 @@
 ---
-title: deuxième blog
-description: Ceci est mon deuxième blog
+title: Deuxième blog
+description: Ceci est mon deuxième blog !
 author: FleauxTV
 image: /uploads/unnamed.png
 ---
