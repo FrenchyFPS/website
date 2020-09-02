@@ -1,6 +1,6 @@
 ---
 title: Troisième post
-description: Description
+description: Description !
 author: Moi
 image: /uploads/unnamed.png
 ---
