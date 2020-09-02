@@ -3,10 +3,6 @@ layout: page
 title: Blog
 ---
 
-
-
-<h1>Blog</h1>
-
   <div class="container">
     <div class="row">
       {% for post in site.posts %}
@@ -14,11 +10,11 @@ title: Blog
         <a href="{{ post.url }}" style="text-decoration:none;color:inherit;">
         <div class="mx-2 border">
           <div class="p-3">
-            <h2 class="text-danger;">{{ post.title }}</h2>
+            <h4 class="text-danger;">{{ post.title }}</h4>
           </div>
           <img src="{{ site.baseurl }}{{ post.image }}" class="img-fluid">
           <div class="p-3 my-1">
-            {{ post.excerpt }}
+            {{ post.excerpt | strip_html | truncatewords: 50 }}
           </div>
         </div>
         </a>
